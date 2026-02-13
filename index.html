@@ -182,6 +182,25 @@ canvas{
     from{transform:translateY(0);}
     to{transform:translateY(-10px);}
 }
+
+.loveGif{
+    width:300px;
+    margin-bottom:20px;
+    animation:gifFade 2s ease forwards;
+    border-radius:20px;
+}
+
+@keyframes gifFade{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
 </style>
 </head>
 
@@ -199,7 +218,7 @@ canvas{
 <canvas id="fireworks"></canvas>
 
 <div class="container">
-    <h1>Hi My Love ❤️</h1>
+    <h1>Happy valentine's day ra TOM ❤️</h1>
     <div id="message"></div>
     <div class="quote" id="quote"></div>
 
@@ -350,21 +369,27 @@ function startSoftHearts(){
 
 /* Yes Click */
 yesBtn.onclick=function(){
+
     setInterval(createFirework,600);
 
     document.querySelector(".container").innerHTML=`
     <div class="finalMessage">
-        <h1 class="fadeIn">You Said Yes ❤️</h1><br>
-        <h3 class="fadeIn delay">
-        And that means more to me than words can ever explain. 
-        I choose you — today, tomorrow, and in every quiet moment in between.
-        </h3>
+        <img src="cute-love.gif" class="loveGif" alt="Love Animation">
+        
+        <h1 class="fadeIn">Yayy !! ❤️</h1>
+        <br>
+        <h2 class="fadeIn delay">
+        Vinay will be so happy !!
+        </h2>
+        <br>
+
         <div class="softEmojis">🤍 🌹 ❤️ 🌹 🤍</div>
     </div>
     `;
 
     startSoftHearts();
 };
+
 </script>
 
 </body>
